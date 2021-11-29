@@ -75,11 +75,11 @@ public class CalcoliHelper {
 	}
 	
 	public static double Potenza(int a, int b) {
-		int potenza=1;
-		if (a == 0 && b == 0) {
-			System.out.println("Impossibile calcolare la potenza");
-			return 0;
-		}else if(a == 0) {
+		double potenza=1;
+		if (a == 0 ) {
+			if(b == 0) {
+				System.out.println("Impossibile calcolare la potenza");
+			}
 			return 0;
 		}
 		
@@ -88,8 +88,7 @@ public class CalcoliHelper {
 		}
 		
 		if (b < 0) {
-			double potenzaDouble = potenza;
-			return 1/potenzaDouble;
+			return 1/potenza;
 		}else {
 			return potenza;
 		}
